@@ -228,6 +228,9 @@ type WebDriver interface {
 	// SessionID returns the current session ID.
 	SessionID() string
 
+	// MoveByOffset moves the mouse to relative coordinates
+	MoveByOffset(xOffset, yOffset int) error
+
 	// SwitchSession switches to the given session ID.
 	SwitchSession(sessionID string) error
 

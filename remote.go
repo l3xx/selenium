@@ -1322,6 +1322,14 @@ func (elem *remoteWE) MoveTo(xOffset, yOffset int) error {
 	})
 }
 
+func (wd *remoteWD) MoveByOffset(xOffset, yOffset int) error {
+	return wd.voidCommand("/session/%s/moveto", map[string]interface{}{
+		"element": nil,
+		"xoffset": xOffset,
+		"yoffset": yOffset,
+	})
+}
+
 func (elem *remoteWE) FindElement(by, value string) (WebElement, error) {
 	url := fmt.Sprintf("/session/%%s/element/%s/element", elem.id)
 	response, err := elem.parent.find(by, value, "", url)
