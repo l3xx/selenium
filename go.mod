@@ -1,4 +1,4 @@
-module github.com/l3x/selenium
+module github.com/l3xx/selenium
 
 go 1.12
 
