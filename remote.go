@@ -1324,7 +1324,6 @@ func (elem *remoteWE) MoveTo(xOffset, yOffset int) error {
 
 func (wd *remoteWD) MoveByOffset(xOffset, yOffset int) error {
 	return wd.voidCommand("/session/%s/moveto", map[string]interface{}{
-		"element": nil,
 		"xoffset": xOffset,
 		"yoffset": yOffset,
 	})
